@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* imagem central */
+        .center-img {
+            position: absolute;
+            width: 300px;
+            height: auto;
+            z-index: 1;
+        }
+
+        /* vídeo passando pela tela */
+        .cat-video {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 180px;
+            z-index: 2;
+            animation: moveCat 6s linear infinite;
+        }
+
+        @keyframes moveCat {
+            0% { left: -250px; }
+            100% { left: 110%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- imagem central -->
+    <img src="clash.jpg" class="center-img" alt="Clash">
+
+    <!-- vídeo atravessando a tela -->
+    <video class="cat-video" src="cat.mp4" autoplay loop muted></video>
+
+</body>
+</html>
