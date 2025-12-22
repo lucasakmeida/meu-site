@@ -13,17 +13,19 @@
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
         }
 
-        /* imagem central no tamanho original */
+        /* imagem central no tamanho ORIGINAL */
         .center-img {
             position: absolute;
-            max-width: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: auto;
             height: auto;
+            max-width: none;
+            max-height: none;
             z-index: 1;
         }
 
@@ -32,8 +34,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            height: auto;
             width: 180px;
+            height: auto;
             z-index: 2;
             animation: moveCat 6s linear infinite;
             pointer-events: none;
